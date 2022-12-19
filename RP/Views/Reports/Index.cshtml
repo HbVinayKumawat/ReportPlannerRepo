@@ -1,0 +1,113 @@
+﻿@model IEnumerable<RP.Domain.Report>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectCode)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ProjectType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddedBy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AddedDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AssignedResources)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ReportPeriod)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Month)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Week)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Interaction)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.InteractionCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Members)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MembersCount)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectCode)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ProjectType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddedBy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddedDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignedResources)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReportPeriod)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Month)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Week)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Interaction)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.InteractionCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Members)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MembersCount)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ReportId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ReportId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ReportId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

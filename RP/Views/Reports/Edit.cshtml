@@ -1,0 +1,99 @@
+﻿@model RP.Domain.Report
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Report</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="ReportId" />
+            <div class="form-group">
+                <label asp-for="ProjectName" class="control-label"></label>
+                <input asp-for="ProjectName" class="form-control" />
+                <span asp-validation-for="ProjectName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectCode" class="control-label"></label>
+                <input asp-for="ProjectCode" class="form-control" />
+                <span asp-validation-for="ProjectCode" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ProjectType" class="control-label"></label>
+                <input asp-for="ProjectType" class="form-control" />
+                <span asp-validation-for="ProjectType" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddedBy" class="control-label"></label>
+                <input asp-for="AddedBy" class="form-control" />
+                <span asp-validation-for="AddedBy" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AddedDate" class="control-label"></label>
+                <input asp-for="AddedDate" class="form-control" />
+                <span asp-validation-for="AddedDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AssignedResources" class="control-label"></label>
+                <input asp-for="AssignedResources" class="form-control" />
+                <span asp-validation-for="AssignedResources" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ReportPeriod" class="control-label"></label>
+                <select asp-for="ReportPeriod" class="form-control"></select>
+                <span asp-validation-for="ReportPeriod" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Month" class="control-label"></label>
+                <select asp-for="Month" class="form-control"></select>
+                <span asp-validation-for="Month" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Week" class="control-label"></label>
+                <select asp-for="Week" class="form-control"></select>
+                <span asp-validation-for="Week" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Date" class="control-label"></label>
+                <input asp-for="Date" class="form-control" />
+                <span asp-validation-for="Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Interaction" class="control-label"></label>
+                <select asp-for="Interaction" class="form-control"></select>
+                <span asp-validation-for="Interaction" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="InteractionCount" class="control-label"></label>
+                <input asp-for="InteractionCount" class="form-control" />
+                <span asp-validation-for="InteractionCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Members" class="control-label"></label>
+                <select asp-for="Members" class="form-control"></select>
+                <span asp-validation-for="Members" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MembersCount" class="control-label"></label>
+                <input asp-for="MembersCount" class="form-control" />
+                <span asp-validation-for="MembersCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
