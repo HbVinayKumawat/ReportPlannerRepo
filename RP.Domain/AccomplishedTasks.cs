@@ -19,5 +19,6 @@ namespace RP.Domain
         public string? AccomplishedTask { get; set; }
 
         public Report? Report { get; set; }
+        public string? ReportManagement { get; set; }
     }
 }
