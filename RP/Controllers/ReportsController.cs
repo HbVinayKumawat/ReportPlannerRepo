@@ -45,6 +45,12 @@ namespace RP.Controllers
             return View(report);
         }
 
+        public IActionResult ViewReports()
+        {
+            return View();
+        }
+
+
         // GET: Reports/Create
         public IActionResult Create()
         {
